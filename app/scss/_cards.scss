@@ -1,0 +1,101 @@
+.row {
+	display: flex;
+	justify-content: space-between;
+}
+.main {
+	width: 870px;
+	height: 200px;
+}
+.sidebar {
+	width: 270px;
+	height: 200px;
+}
+.card {
+	position: relative;
+	width: 270px;
+	background-color: #fff;
+	&-link {
+		display: inline-block;
+		text-decoration: none;
+		transition: all 0.2s ease-in;
+		&:hover {
+			opacity: 0.8;
+			text-decoration: none;
+			transform: translateY(-5px);
+		}
+	}
+	&-holder {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		& > .card-link {
+			margin-bottom: 30px;
+		}
+	}	
+	&__badges {
+		display: flex;
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		right: 15px;
+	}
+	&__badges > * + * {
+		margin-left: 10px;
+	}
+	&__badge {
+		background: #a3a3a3;
+		display: inline-block;
+		border-radius: 4px;
+		height: 22px;
+		padding: 0 10px;
+		font-size: 14px;
+		line-height: 23px;
+		color: #000;
+		&--class {
+			background: #ffcf26;
+		}
+		&--credit {
+			background: #11be75;
+			color: #fff;
+		}
+	}
+	&__content {
+		padding: 16px 15px 20px;
+	}
+	&__title {
+		margin: 0;
+		margin-bottom: 11px;
+		font-weight: 700;
+		font-size: 18px;
+		line-height: 1.16;
+	}
+	&__term {
+		margin-bottom: 11px;
+		font-size: 14px;
+		line-height: 1.14;
+		color: #000;
+	}
+	&__metro {
+		margin-bottom: 11px;
+		font-size: 14px;
+		line-height: 1.14;
+		color: #000;
+		&::before {
+			content: "";
+			display: inline-block;
+			margin-right: 10px;
+			background-image: url('../images/dest/metro .svg');
+			background-repeat: no-repeat;
+			background-size: initial;
+			width: 16px;
+			height: 11px;
+		}
+	}
+	&__address {
+		font-size: 14px;
+		line-height: 1.14;
+		color: #777;
+	}
+
+
+}
